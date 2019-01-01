@@ -1,0 +1,9 @@
+mkdir spring-cloud-configuration
+cd spring-cloud-configuration
+git init
+touch config-client-development.properties
+vim config-client-development.properties
+
+message=Hello Spring
+message={cipher}3395308261f945436ab5a8e6b1d8602de49505e2ba2ad4750472d3f928505681
+ 

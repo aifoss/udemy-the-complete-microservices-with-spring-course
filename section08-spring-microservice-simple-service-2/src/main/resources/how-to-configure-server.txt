@@ -1,0 +1,7 @@
+Run Configurations:
+
+VM arguments:
+
+-Dserver.port=7777
+-Dserver.port=8888
+-Dserver.port=9999

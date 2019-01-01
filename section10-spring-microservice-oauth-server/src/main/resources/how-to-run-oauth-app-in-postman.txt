@@ -1,0 +1,49 @@
+Access Token Generation:
+
+POST 
+http://localhost:9090/oauth/token
+
+Authorization: 
+Basic Auth
+Username: webapp
+Password: websecret
+
+Params:
+grant_type: password
+username: user1
+password: password1
+
+http://localhost:9090/oauth/token?grant_type=password&username=user1&password=password1
+
+=>
+{
+    "access_token": "68f3d6dd-da1f-4202-9086-a192d68903a4",
+    "token_type": "bearer",
+    "expires_in": 43199,
+    "scope": "read,write,trust"
+}
+
+-------------------------------------------------------------------------------------------
+
+Resource Endpoint Access:
+
+GET
+http://localhost:9090/resource/endpoint
+
+Params:
+access_token: 68f3d6dd-da1f-4202-9086-a192d68903a4
+
+http://localhost:9090/resource/endpoint?access_token=68f3d6dd-da1f-4202-9086-a192d68903a4
+
+=>
+This message is protected by the resource server
+
+---------------------------------------------------------------------------------
+
+After adding @EnableGlobalMethodSecurity and @PreAuthorize and adding ADMIN user:
+
+Accessing resource endpoint with non-admin user access token fails with access denied error.
+
+Generate access token for admin user.
+Accessing resource endpoint with admin-user access token succeeds.
+ 

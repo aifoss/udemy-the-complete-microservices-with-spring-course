@@ -1,0 +1,37 @@
+On Terminal:
+
+cd /Users/sofia/.m2/repository/org/hsqldb/hsqldb/2.4.1
+
+touch server.properties
+
+vim server.properties
+
+server.database.0=file:hsqldb/example
+server.dbname.0=testdb
+
+java -classpath hsqldb-2.4.1.jar org.hsqldb.server.Server
+
+java -classpath hsqldb-2-4.1.jar org.hsqldb.server.Server --database.0 file:hsqldb/example --dbname.0 testdb
+
+------
+
+In Maven Dependencies:
+
+Right-click hsqldb-2.4.1.jar
+
+Run as Java Application
+Server - org.hsqldb.server
+
+Run Configuration:
+Program Arguments:
+--database.0 file:hsqldb/example --dbname.0 testdb
+
+Run
+
+Right-click hsqldb-2.4.1.jar
+
+Run as Java Application
+DatabaseManager - org.hsqldb.util
+
+Type: HSQL Database Engine Server
+URL: jdbc:hsqldb:hsql://localhost/testdb

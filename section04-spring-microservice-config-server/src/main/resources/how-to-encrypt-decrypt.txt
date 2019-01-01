@@ -1,0 +1,7 @@
+Download jce-policy-8.zip.
+Copy local_policy.jar and US_export_policy.jar to jre/lib/security.
+
+
+curl http://localhost:8888/encrypt -d SecretMessage
+
+curl http://localhost:8888/decrypt --data-urlencode 2a3be03746167eef8775b3f3450f9ae695b5f46ca10c19a2872932e754eab90f

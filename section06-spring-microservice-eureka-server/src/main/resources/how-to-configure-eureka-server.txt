@@ -1,0 +1,12 @@
+vim /etc/hosts
+
+127.0.0.1	peer1
+127.0.0.1	peer2
+
+
+Run Configurations:
+
+VM arguments:
+
+-Dspring.profiles.active=peer1
+-Dspring.profiles.active=peer2
